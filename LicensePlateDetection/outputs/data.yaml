@@ -1,0 +1,18 @@
+# YOLOv8 Dataset Configuration for License Plate Detection
+
+path: c:\Projects\AI\Scaler\LicensePlateDetection\Data
+train: train
+val: val
+test: test
+
+# Classes
+names:
+  0: license_plate
+
+nc: 1
+
+# Dataset info
+info:
+  description: License Plate Detection for Privacy Blurring
+  task: object_detection
+  note: Labels copied from /Data/labels to image folders for YOLO compatibility

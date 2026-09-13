@@ -1,0 +1,27 @@
+# Dependencies for RAG_Assignment.ipynb
+#
+# Install into this folder's venv:
+#   .venv\Scripts\python.exe -m pip install -r requirements.txt
+# Or from inside the notebook (installs into the running kernel):
+#   %pip install -q -r requirements.txt
+
+# Jupyter kernel support (needed to run the notebook in VS Code)
+ipykernel
+ipywidgets
+
+# Core RAG stack
+pymilvus
+sentence-transformers
+datasets
+transformers
+torch
+accelerate
+opik
+tqdm
+
+# Milvus Lite powers the local file-based DB the notebook uses:
+#   MilvusClient(uri="./hf_docs_milvus.db")
+# Listed directly rather than as the `pymilvus[milvus-lite]` extra, because that
+# extra is gated on `sys_platform != 'win32'` and so installs nothing on Windows.
+# milvus-lite ships a pure-python wheel from 3.2.x that does work on Windows.
+milvus-lite>=3.2.1
